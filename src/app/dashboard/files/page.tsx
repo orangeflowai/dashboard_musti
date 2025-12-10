@@ -8,6 +8,7 @@ interface FileItem {
   name: string;
   type: string;
   url: string;
+  path?: string;
   size: number;
   mime_type: string;
   is_public: boolean;
