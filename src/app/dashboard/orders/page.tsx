@@ -15,6 +15,7 @@ interface Order {
   tax: number;
   total: number;
   delivery_address: string;
+  payment_method?: string;
   payment_status: string;
   rider_id: string;
   created_at: string;
