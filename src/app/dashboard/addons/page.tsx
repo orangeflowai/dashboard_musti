@@ -11,7 +11,7 @@ interface Addon {
   description: string;
   price: number;
   is_required: boolean;
-  max_selections: number;
+  max_selections: number | null;
   order_index: number;
   is_active: boolean;
 }
@@ -47,7 +47,7 @@ export default function AddonsPage() {
     description: '',
     price: 0,
     is_required: false,
-    max_selections: null,
+    max_selections: undefined,
     order_index: 0,
     is_active: true,
   });
@@ -161,7 +161,7 @@ export default function AddonsPage() {
       description: '',
       price: 0,
       is_required: false,
-      max_selections: null,
+      max_selections: undefined,
       order_index: 0,
       is_active: true,
     });
@@ -384,7 +384,7 @@ export default function AddonsPage() {
                     name="max_selections"
                     type="number"
                     value={formData.max_selections || ''}
-                    onChange={(e) => setFormData({ ...formData, max_selections: e.target.value ? parseInt(e.target.value) : null })}
+                    onChange={(e) => setFormData({ ...formData, max_selections: e.target.value ? parseInt(e.target.value) : undefined })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-gray-900 bg-white"
                     placeholder="Unlimited"
                   />
