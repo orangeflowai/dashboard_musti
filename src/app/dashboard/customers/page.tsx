@@ -97,13 +97,8 @@ export default function CustomersPage() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {customer.last_sign_in_at ? new Date(customer.last_sign_in_at).toLocaleDateString() : 'Never'}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button
-                      onClick={() => handleDelete(customer.id)}
-                      className="text-red-600 hover:text-red-900"
-                    >
-                      Delete
-                    </button>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    View Orders
                   </td>
                 </tr>
               ))
